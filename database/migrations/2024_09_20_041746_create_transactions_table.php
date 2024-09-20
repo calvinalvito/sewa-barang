@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('trc_id');
+            $table->string('trx_id');
             $table->string('phone_number');
             $table->string('proof');
             $table->text('address');
             $table->date('started_at');
+            $table->unsignedBigInteger('duration');
+            $table->date('ended_at');
             $table->boolean('is_paid');
             $table->enum('delivery_type',['pickup','home_delivery'])->default('pickup');
             $table->unsignedBigInteger('total_amount');
