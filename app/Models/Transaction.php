@@ -16,6 +16,7 @@ class Transaction extends Model
         'name',
         'trx_id',
         'proof',
+        'phone_number',
         'address',
         'total_amount',
         'product_id',
